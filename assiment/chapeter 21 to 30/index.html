@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Assignment</title>
+</head>
+<body>
+
+  <h1>JavaScript Assignment</h1>
+
+  <script>
+
+    // Q1
+    var firstName = prompt("Enter your first name");
+    var lastName = prompt("Enter your last name");
+
+    var fullName = firstName + " " + lastName;
+
+    document.write("<h3>Q1</h3>");
+    document.write("Hello " + fullName + "<br><br>");
+
+
+
+    // Q2
+    var mobile = prompt("Enter your favorite mobile model");
+
+    document.write("<h3>Q2</h3>");
+    document.write("Your favorite phone is: " + mobile + "<br>");
+    document.write("Length of string: " + mobile.length + "<br><br>");
+
+
+
+    // Q3
+    var country = "Pakistani";
+
+    document.write("<h3>Q3</h3>");
+    document.write("String: " + country + "<br>");
+    document.write("Index of n: " + country.indexOf("n") + "<br><br>");
+
+
+
+    // Q4
+    var text = "Hello World";
+
+    document.write("<h3>Q4</h3>");
+    document.write("String: " + text + "<br>");
+    document.write("Last index of l: " + text.lastIndexOf("l") + "<br><br>");
+
+
+
+    // Q5
+    var word = "Pakistani";
+
+    document.write("<h3>Q5</h3>");
+    document.write("Character at index 3: " + word.charAt(3) + "<br><br>");
+
+
+
+    // Q6
+    var first = prompt("Enter first name");
+    var last = prompt("Enter last name");
+
+    var full = first.concat(" ", last);
+
+    document.write("<h3>Q6</h3>");
+    document.write("Hello " + full + "<br><br>");
+
+
+
+    // Q7
+    var city = "Hyderabad";
+
+    var replaceCity = city.replace("Hyder", "Islam");
+
+    document.write("<h3>Q7</h3>");
+    document.write("Before replacement: " + city + "<br>");
+    document.write("After replacement: " + replaceCity + "<br><br>");
+
+
+
+    // Q8
+    var message = "Ali and Sami are best friends. They play cricket and football together.";
+
+    var newMessage = message.replaceAll("and", "&");
+
+    document.write("<h3>Q8</h3>");
+    document.write(newMessage + "<br><br>");
+
+
+
+    // Q9
+    var numString = "472";
+
+    var num = Number(numString);
+
+    document.write("<h3>Q9</h3>");
+    document.write("Value: " + numString + "<br>");
+    document.write("Type: " + typeof numString + "<br><br>");
+
+    document.write("Value: " + num + "<br>");
+    document.write("Type: " + typeof num + "<br><br>");
+
+
+
+    // Q10
+    var userInput = prompt("Enter text");
+
+    document.write("<h3>Q10</h3>");
+    document.write("Upper Case: " + userInput.toUpperCase() + "<br><br>");
+
+
+
+    // Q11
+    var userText = prompt("Enter text");
+
+    var firstLetter = userText.charAt(0).toUpperCase();
+    var remainingLetter = userText.slice(1).toLowerCase();
+
+    var titleCase = firstLetter + remainingLetter;
+
+    document.write("<h3>Q11</h3>");
+    document.write("Title Case: " + titleCase + "<br><br>");
+
+
+
+    // Q12
+    var number = 35.36;
+
+    var convertString = number.toString();
+
+    var result = convertString.replace(".", "");
+
+    document.write("<h3>Q12</h3>");
+    document.write("Result: " + result + "<br><br>");
+
+
+
+    // Q13
+    var username = prompt("Enter username");
+
+    if (
+      username.includes("@") ||
+      username.includes(".") ||
+      username.includes(",") ||
+      username.includes("!")
+    ) {
+      alert("Please enter a valid username");
+    } else {
+      document.write("<h3>Q13</h3>");
+      document.write("Valid Username: " + username + "<br><br>");
+    }
+
+
+
+    // Q14
+    var bakery = ["cake", "apple pie", "cookie", "chips", "patties"];
+
+    var searchItem = prompt("Welcome to bakery. What do you want?");
+
+    searchItem = searchItem.toLowerCase();
+
+    var check = bakery.includes(searchItem);
+
+    document.write("<h3>Q14</h3>");
+
+    if (check) {
+      document.write(searchItem + " is available in our bakery <br><br>");
+    } else {
+      document.write(searchItem + " is not available in our bakery <br><br>");
+    }
+
+
+
+    // Q15
+    var password = prompt("Enter password");
+
+    if (
+      password.length >= 6 &&
+      isNaN(password.charAt(0)) &&
+      /[a-zA-Z]/.test(password) &&
+      /[0-9]/.test(password)
+    ) {
+      document.write("<h3>Q15</h3>");
+      document.write("Valid Password <br><br>");
+    } else {
+      alert("Enter valid password");
+    }
+
+
+
+    // Q16
+    var university = "University of Karachi";
+
+    var uniArray = university.split("");
+
+    document.write("<h3>Q16</h3>");
+
+    for (var i = 0; i < uniArray.length; i++) {
+      document.write(uniArray[i] + "<br>");
+    }
+
+
+
+    // Q17
+    var inputText = prompt("Enter any text");
+
+    var lastChar = inputText.charAt(inputText.length - 1);
+
+    document.write("<h3>Q17</h3>");
+    document.write("Last character: " + lastChar + "<br><br>");
+
+
+
+    // Q18
+    var sentence = "The quick brown fox jumps over the lazy dog";
+
+    sentence = sentence.toLowerCase();
+
+    var words = sentence.split(" ");
+
+    var count = 0;
+
+    for (var i = 0; i < words.length; i++) {
+
+      if (words[i] === "the") {
+        count++;
+      }
+
+    }
+
+    document.write("<h3>Q18</h3>");
+    document.write("Occurrences of 'the': " + count);
+
+  </script>
+
+</body>
+</html>
