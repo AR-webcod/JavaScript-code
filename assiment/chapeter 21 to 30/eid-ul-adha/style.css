@@ -1,0 +1,92 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      width: 90%;
+      max-width: 700px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 40px;
+    }
+
+    .counter {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 120px;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .box h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      font-size: 18px;
+    }
+
+    @media(max-width:600px) {
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .box {
+        width: 100px;
+        padding: 15px;
+      }
+
+      .box h2 {
+        font-size: 30px;
+      }
+    }
+
+    @keyframes celebrate {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .celebrate {
+      animation: celebrate 1s ease-in-out;
+      font-size: 40px;
+      color: #ffd700;
+    }
