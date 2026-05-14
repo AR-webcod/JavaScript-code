@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.bulb-box {
+    position: relative;
+}
+
+.bulb {
+    width: 220px;
+    transition: 0.5s;
+}
+
+.glow {
+    filter: drop-shadow(0 0 40px yellow);
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 40px yellow);
+    }
+
+    to {
+        filter: drop-shadow(0 0 90px yellow);
+    }
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.on-btn {
+    background: yellow;
+}
+
+.off-btn {
+    background: #555;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Human Hand Animation */
+.hand {
+    position: absolute;
+    width: 100px;
+    bottom: -20px;
+    right: -100px;
+    animation: moveHand 2s infinite;
+}
+
+@keyframes moveHand {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
