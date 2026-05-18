@@ -1,0 +1,10 @@
+
+        .abc {
+            margin-left: 70%;
+            transition: 1s;
+        }
+
+        .re {
+            margin-left: 0;
+            transition: 1s;
+        }
